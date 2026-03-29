@@ -18,7 +18,7 @@ label_encoder = pickle.load(open("label_encoder.pkl", "rb"))
 
 st.set_page_config(page_title="Crop Recommendation System", layout="centered")
 
-st.title("🌱 Crop Recommendation System")
+st.title("Crop Recommendation System")
 
 st.write("Enter soil and weather details to get the best crop recommendation.")
 
@@ -37,4 +37,4 @@ if st.button("Predict Crop"):
     prediction = model.predict(scaled_features)
     crop = label_encoder.inverse_transform(prediction)[0]
 
-    st.success(f"✅ Recommended Crop: **{crop}**")
+    st.success(f" Recommended Crop: **{crop}**")
